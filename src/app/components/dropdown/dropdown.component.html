@@ -1,0 +1,27 @@
+<div class="relative" (click)="handleDropdown()">
+  <a
+    class="rounded-full cursor-pointer border-2 border-transparent transition-all flex items-center justify-center shadow-sm bg-white w-6 h-6 mr-4 p-5 hover:bg-slate-100 hover:border-slate-200"
+  >
+    <icon-user size="lg"></icon-user>
+  </a>
+
+  <div
+    class="absolute h-auto top-12 min-w-40 -left-1/2 transition rounded-lg bg-white shadow-lg flex flex-col items-center"
+    *ngIf="viewDropdown"
+  >
+    <div class="text-start border-b border-slate-200 py-2 w-full px-2">
+      <h4 class="text-gray-500 text-sm">John Doe</h4>
+      <span class="text-gray-300 text-sm">johndoe@email.com</span>
+    </div>
+
+    <div class="px-4 py-2 flex flex-col w-full">
+      <a
+        class="py-2 cursor-pointer text-sm text-gray-700 transition w-full text-start hover:text-indigo-700"
+        *ngFor="let item of dropdownItems"
+        [routerLink]="item.route"
+      >
+        <span class="">{{ item.label }}</span>
+      </a>
+    </div>
+  </div>
+</div>

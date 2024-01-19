@@ -1,0 +1,20 @@
+<label
+  for="email-address-icon"
+  class="block mb-2 text-sm font-medium text-gray-900"
+  >{{ label }}</label
+>
+<div class="relative">
+  <div
+    class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none"
+  >
+    <icon-email *ngIf="icon == 'email'"></icon-email>
+    <icon-password *ngIf="icon == 'password'"></icon-password>
+    <icon-user *ngIf="icon == 'user'"></icon-user>
+    <icon-tag *ngIf="icon == 'tag'"></icon-tag>
+  </div>
+  <input
+    [type]="inputType"
+    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 mb-4"
+    [placeholder]="placeholder"
+  />
+</div>

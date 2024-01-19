@@ -1,0 +1,14 @@
+<button
+  class="rounded-full hover:bg-slate-200 p-2 relative"
+  (mouseenter)="handleBellStateEnter()"
+  (mouseleave)="handleBellStateLeave()"
+>
+  <icon-bell *ngIf="!isBellActive"></icon-bell>
+  <icon-bell-active *ngIf="isBellActive"></icon-bell-active>
+
+  <div
+    class="rounded-full w-5 h-5 text-sm text-white bg-red-500 shadow-sm top-0 -right-2 absolute"
+  >
+    1
+  </div>
+</button>

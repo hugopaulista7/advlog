@@ -1,0 +1,65 @@
+<container>
+  <card>
+    <div class="flex w-100 h-100">
+      <div class="w-1/2 h-100 mr-4 p-8">
+        <h3 class="text-2xl font-bold text-indigo-600 mb-4">
+          Create your account
+        </h3>
+        <form>
+          <form-input
+            label="Email"
+            type="email"
+            placeholder="email@email.com"
+            icon="email"
+          ></form-input>
+
+          <form-input
+            label="Name"
+            type="text"
+            placeholder="John Doe"
+            icon="user"
+          ></form-input>
+
+          <form-input
+            label="Discord Tag"
+            type="text"
+            placeholder="johndoe123"
+            icon="tag"
+          ></form-input>
+
+          <form-input
+            type="password"
+            label="Password"
+            placeholder="*******"
+            icon="password"
+          ></form-input>
+          <form-input
+            type="password"
+            label="Confirm Password"
+            placeholder="*******"
+            icon="password"
+          ></form-input>
+
+          <div class="text-end w-100">
+            <form-button text="Submit"></form-button>
+          </div>
+        </form>
+      </div>
+
+      <div
+        class="w-1/2 h-100 p-8 bg-gradient-to-r from-indigo-600 to-indigo-400 rounded-tr rounded-br flex flex-col justify-center"
+      >
+        <h1 class="text-4xl font-bold text-white mb-10">
+          Already have an account?
+        </h1>
+
+        <a
+          class="inline-flex items-center justify-center h-10 px-10 py-0 text-sm font-semibold text-center text-white no-underline align-middle transition-all duration-300 ease-in-out bg-transparent border border-white border-solid rounded-lg cursor-pointer select-none hover:text-indigo-300 hover:border-indigo-300 focus:shadow-xs focus:no-underline"
+          routerLink="/login"
+        >
+          Login
+        </a>
+      </div>
+    </div>
+  </card>
+</container>
