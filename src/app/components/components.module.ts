@@ -10,9 +10,19 @@ import { IconsModule } from './icons/icons.module';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { NotificationButtonComponent } from './notification-button/notification-button.component';
 import { RouterModule } from '@angular/router';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { NgIconsModule } from '@ng-icons/core';
+
+import { heroChartPieSolid } from '@ng-icons/heroicons/solid';
 
 @NgModule({
-  imports: [CommonModule, BrowserModule, IconsModule, RouterModule],
+  imports: [
+    CommonModule,
+    BrowserModule,
+    IconsModule,
+    RouterModule,
+    NgIconsModule.withIcons({ heroChartPieSolid }),
+  ],
   declarations: [
     CardComponent,
     InputComponent,
@@ -21,6 +31,7 @@ import { RouterModule } from '@angular/router';
     NavbarComponent,
     DropdownComponent,
     NotificationButtonComponent,
+    SidebarComponent,
   ],
   exports: [
     CardComponent,
@@ -30,6 +41,7 @@ import { RouterModule } from '@angular/router';
     NavbarComponent,
     DropdownComponent,
     NotificationButtonComponent,
+    SidebarComponent,
   ],
 })
 export class ComponentsModule {}
